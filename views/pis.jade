@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 List of Pi's
+    p Pi's in the network
+    ul
+        each pi in pis
+            li= pi.name + ' '
+                |[&nbsp;
+                a(href='/pis/reset/#{pi.gpio}')= 'reset'
+                |&nbsp;|&nbsp;
+                a(href='/pis/poweroff/#{pi.gpio}')= 'power off'
+                |&nbsp;]
+

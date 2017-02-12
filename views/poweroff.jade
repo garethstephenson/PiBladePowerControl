@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 Power off Pi "#{pi.name}"
+    p Are you sure you want to power off Pi "#{pi.name}?"
+    form(method='POST')
+        button(type='submit') Yes
+        button(type='reset' onclick='javascript:history.back();') No

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 Reset Pi "#{pi.name}"
+    p Are you sure you want to reset Pi "#{pi.name}?"
+    form(method='POST')
+        button(type='submit') Yes
+        button(type='reset' onclick='javascript:history.back();') No
