@@ -1,11 +1,42 @@
 body {
-  padding: 50px;
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-button {
-  font-size: 18px;
+
+input[type=button], input[type=submit] {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+input[type=submit].yes {
+    background-color: #7dd375;
+}
+input[type=button].no {
+    background-color: #ff8686;
 }
 
 a {
-  color: #00B7FF;
+    color: #003248;
+}
+
+.note {
+    color: #ff8686;
+}
+
+.floated_img {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #CCCCCC;
+    background-color: #ECECEC;
+    border-radius: 5px;
+}
+
+.floated_img:hover {
+    background-color: #cddecd;
+}
+
+.center_text {
+    text-align: center;
 }

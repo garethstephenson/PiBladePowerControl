@@ -3,6 +3,9 @@ extends layout
 block content
     h1 Reset Pi "#{pi.name}"
     p Are you sure you want to reset Pi "#{pi.name}?"
+    if pi.isMaster
+        p.note Note: Resetting the master Pi will also reset the power status of all the slaves to ON
+
     form(method='POST')
-        button(type='submit') Yes
-        button(type='reset' onclick='javascript:history.back();') No
+        input(type='submit' class='yes' value='Yes')
+        input(type='button' class='no' onclick='javascript:history.back();' value='No')
